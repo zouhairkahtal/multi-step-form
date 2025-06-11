@@ -1,4 +1,4 @@
-import Steps from "./components/steps"
+import Steps from "./components/Steps"
 
 
 
@@ -8,7 +8,7 @@ function App() {
     <>
      <div className="w-screen h-screen bg-Purple200 flex items-center justify-center">
         <Steps/>
-        
+
      </div>
     </>
   )
