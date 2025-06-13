@@ -4,9 +4,9 @@ import Nav from "./Nav";
 
     return(
         <>
-           <div className="w-contactUsdevWidth h-contactUsdevHeight bg-white rounded-3xl p-5  items-center justify-center">
+           <div className="w-contactUsdevWidth h-contactUsdevHeight bg-white rounded-3xl p-5" >
             <Nav/>
-
+            
            </div>
         </>
     )

@@ -22,10 +22,10 @@ export default {
       //   border:'green600'
       // },
       width: {
-        contactUsdevWidth: "1100px",
+        contactUsdevWidth: "900px",
       },
       height: {
-        contactUsdevHeight: "650px",
+        contactUsdevHeight: "568px",
       },
       
     },
