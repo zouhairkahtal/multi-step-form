@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
@@ -26,10 +26,24 @@ function AddOns() {
     },
   });
 
+  const location = useLocation();
+  const { isYearly, DateStep2 } = location.state || {};
   const onSubmit = (data: FormData) => {
-    console.log("Form data:", data);
-    navigate("/summary");
+    console.log("Form data:", DateStep2);
+    navigate("/summary",{
+    state: {
+      isYearly,
+     DateStep2,
+      ...data
+    },
+  });
   };
+  console.log("Received isYearly:", isYearly);
+
+
+const onlinePrice = !isYearly ? "$1/mo" : "$10/yo";
+const storagePrice = !isYearly ? "$2/mo" : "$20/yo";
+const profilePrice = !isYearly ? "$2/mo" : "$20/yo";
 
   return (
     <div className="w-full h-full ml-5 flex justify-center">
@@ -45,37 +59,37 @@ function AddOns() {
           </div>
           <div className="w-full h-[85%]">
             <div className="gap-3 mb-8 space-y-4">
-              <label htmlFor="onlineServce" className="flex justify-between items-start p-4 border rounded-lg">
-                <div className="flex items-start space-x-3">
+              <label htmlFor="onlineServce" className="flex justify-between items-center p-4 border rounded-lg">
+                <div className="flex space-x-3">
                   <input type="checkbox" id="onlineServce" {...register("onlineServce")} />
                   <div>
                     <span className="font-medium">Online service</span>
                     <p className="text-sm text-gray-500">Access to multiplayer games</p>
                   </div>
                 </div>
-                <span className="text-blue-600 font-semibold">+$1/mo</span>
+                <span className="text-blue-600 font-semibold">{onlinePrice}</span>
               </label>
 
-              <label htmlFor="largerStorage" className="flex justify-between items-start p-4 border rounded-lg">
-                <div className="flex items-start space-x-3">
+              <label htmlFor="largerStorage" className="flex justify-between items-center p-4 border rounded-lg">
+                <div className="flex space-x-3">
                   <input type="checkbox" id="largerStorage" {...register("largerStorage")} />
                   <div>
                     <span className="font-medium">Larger storage</span>
                     <p className="text-sm text-gray-500">Extra 1TB of cloud save</p>
                   </div>
                 </div>
-                <span className="text-blue-600 font-semibold">+$2/mo</span>
+                <span className="text-blue-600 font-semibold">{storagePrice}</span>
               </label>
 
-              <label htmlFor="customizableProfile" className="flex justify-between items-start p-4 border rounded-lg">
-                <div className="flex items-start space-x-3">
+              <label htmlFor="customizableProfile" className="flex justify-between items-center p-4 border rounded-lg">
+                <div className="flex space-x-3">
                   <input type="checkbox" id="customizableProfile" {...register("customizableProfile")} />
                   <div>
                     <span className="font-medium">Customizable profile</span>
                     <p className="text-sm text-gray-500">Custom theme on your profile</p>
                   </div>
                 </div>
-                <span className="text-blue-600 font-semibold">+$2/mo</span>
+                <span className="text-blue-600 font-semibold">{profilePrice}</span>
               </label>
             </div>
 

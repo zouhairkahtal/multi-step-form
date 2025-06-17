@@ -24,7 +24,13 @@ function SelectPlan() {
       billing: isYearly ? "yearly" : "monthly",
     });
     console.log(data)
-    navigate("/add-ons")
+
+    navigate("/add-ons",  {
+  state: {
+    isYearly: isYearly,
+    DateStep2:data,
+  },
+})
   };
   const navigate = useNavigate();
 
