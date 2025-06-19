@@ -103,7 +103,7 @@ function Summary() {
             type="button"
             className="cursor-pointer font-semibold hover:text-blue950 text-Grey500 px-5 py-2 mt-10 rounded-xl hover:bg-blue800 transition"
             onClick={() => {
-              navigate("/your-info");
+              navigate("/add-ons");
             }}
           >
             Go Back
