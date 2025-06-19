@@ -13,7 +13,7 @@ This is a clean and modern multi-step form UI built with React. The form guides 
 ## 🧩 Features
 
 - Four-step form navigation
-- Responsive and clean UI
+- clean UI
 - Styled components / Tailwind CSS
 - Form validation for personal info
 - Step-by-step indicator sidebar
