@@ -8,7 +8,7 @@ This is a clean and modern multi-step form UI built with React. The form guides 
 
 ## 📸 Preview
 
-![Form Preview](./Screenshot%202025-06-19%20153802.png)
+![Form Preview](./design/desktop-design-step-1.jpg)
 
 ## 🧩 Features
 
