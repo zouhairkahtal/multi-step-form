@@ -29,7 +29,7 @@ This is a clean and modern multi-step form UI built with React. The form guides 
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/your-username/multi-step-form.git
+git clone https://github.com/zouhairkahtal/multi-step-form.git
 cd multi-step-form
 npm install
 npm run dev
