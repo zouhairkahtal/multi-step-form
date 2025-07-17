@@ -16,7 +16,7 @@ function YourInfo() {
     
     register,
     handleSubmit,
-    formState: { errors,isValid},
+    formState: { errors},
   } = useForm<FormFields>({
     resolver: zodResolver(formSchema),
   });
@@ -92,7 +92,7 @@ function YourInfo() {
           <div className="w-full flex justify-end ">
             <button
               type="submit"
-              disabled={!isValid}
+        
               className="bg-blue950 font-semibold cursor-pointer text-white px-5 py-2 mt-10 rounded-lg hover:bg-blue800 transition"
             >
               Next Step
