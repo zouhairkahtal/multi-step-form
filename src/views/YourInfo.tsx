@@ -16,11 +16,9 @@ function YourInfo() {
     
     register,
     handleSubmit,
-<<<<<<< HEAD
-    formState: { errors}
-=======
+
     formState: { errors},
->>>>>>> 9c839151d6f7e67f91a1dd5c956601ed224ccc31
+
   } = useForm<FormFields>({
     resolver: zodResolver(formSchema),
   });
