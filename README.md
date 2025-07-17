@@ -11,15 +11,14 @@ Currently, two official plugins are available:
 
 ## Expanding the ESLint configuration
 
-<<<<<<< HEAD
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
 =======
 - Four-step form navigation
 - clean UI
 - Styled components / Tailwind CSS
 - Form validation for personal info
 - Step-by-step indicator sidebar
->>>>>>> 623d368b2cbe8f3176ae985424e3272731e0049f
+
 
 ```js
 export default tseslint.config({
