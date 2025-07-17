@@ -16,7 +16,7 @@ function YourInfo() {
     
     register,
     handleSubmit,
-    formState: { errors,isValid},
+    formState: { errors},
   } = useForm<FormFields>({
     resolver: zodResolver(formSchema),
   });
